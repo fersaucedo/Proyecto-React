@@ -1,7 +1,8 @@
-.item-article {
-   border: .1rem solid ;
+.card-item {
+max-width: 15rem;
 }
-
-.item-article img {
-    width: 20px;
+.card-item-body {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
 }
