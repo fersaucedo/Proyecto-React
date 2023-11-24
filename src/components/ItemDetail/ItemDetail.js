@@ -2,6 +2,8 @@ import "./ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount"
 
 const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
+
+  console.log('Propiedades del producto:', { id, name, img, category, description, price, stock });
   return (
 
 

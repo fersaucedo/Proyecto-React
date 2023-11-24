@@ -8,8 +8,12 @@ nav {
 nav h2 {
    font-size: 3rem;
    margin: .5rem;
-   font-weight:400;
    font-style: italic;
+   color: black;
+}
+
+a {
+    text-decoration: none;
 }
 nav button {
     font-size: 1rem;
@@ -17,7 +21,7 @@ nav button {
 .contenedor-categorias-cart {
     display: flex; 
     align-items: center;
-    gap: 5rem;
+    gap: 2rem;
 }
 .categorias {
     display: flex; 

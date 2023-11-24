@@ -1,8 +1,11 @@
 import "./Item.css"
+import { Link } from "react-router-dom"
 
 
 const Item = ({ id, name, img, price, stock }) => {
 
+    console.log('ID del producto en Item:', id);
+    
     return (
 
         <div className="card card-item">
@@ -17,7 +20,7 @@ const Item = ({ id, name, img, price, stock }) => {
 
                 <h6 className="card-subtitle mb-2 text-body-secondary">Stock disponible: {stock}</h6>
 
-                <button className="btn btn-primary">Ver detalles</button>
+                <Link to={`/item/${id}`} className="btn btn-primary">Ver detalles</Link>
 
             </div>
         </div>

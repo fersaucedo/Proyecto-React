@@ -30,6 +30,16 @@ const productos = [
         img: "https://www.tematika.com/media/catalog/Ilhsa/Imagenes/703241.jpg",
         stock: 20,
         description: "Varela de Mar es un pueblo pequeño y tranquilo. Doscientos treinta y tres habitantes. Una playa que desaparece cuando sube la marea. Un faro abandonado.Por eso Alba no lo visita desde hace cinco años. Bueno; por eso y porque allí fue donde aprendió lo que duele el amor y la herida aún escuece.Sin embargo; en Varela también está Pelayo; su abuelo; que ha comenzado a olvidar y que ahora la necesita. Y también los recuerdos que dejó en sus calles cuando se marchó sin mirar atrás. Y Enol. El chico de las conversaciones raras; la obsesión por las mareas y que parece haber nacido en la época equivocada. Un regreso inesperado; un faro lleno de secretos y dos historias inacabadas que; quizá; se merecen la oportunidad de un nuevo final. «Alba; vive el presente. Porque un día será pasado y te atormentará no haberte dado cuenta antes de que todo acaba; incluso lo que creías que era para siempre.»"
+    },
+
+    {
+        id: '4',
+        name: 'LOS SIETE MARIDOS DE EVELYN HUGO - TAYLOR JENKINS REID',
+        price: 13200,
+        category: 'novela',
+        img: "https://www.tematika.com/media/catalog/Ilhsa/Imagenes/679908.jpg",
+        stock: 7,
+        description: "Evelyn Hugo, el ícono de Hollywood que se ha recluido en su edad madura, decide al fin contar la verdad sobre su vida llena de glamour y de escándalos. Pero cuando elige para ello a Monique Grant, una periodista desconocida, nadie se sorprende más que la misma Monique. ¿Por qué ella? ¿Por qué ahora?   Monique no está precisamente en su mejor momento. Su marido la abandonó, y su vida profesional no avanza. Aun ignorando por qué Evelyn la ha elegido para escribir su biografía, Monique está decidida a aprovechar esa oportunidad para dar impulso a su carrera.        Convocada al lujoso apartamento de Evelyn, Monique escucha fascinada mientras la actriz le cuenta su historia. Desde su llegada a Los Ángeles en los años 50 hasta su decisión de abandonar su carrera en el espectáculo en los 80 -y, desde luego, los siete maridos que tuvo en ese tiempo- Evelyn narra una historia de ambición implacable, amistad inesperada, y un gran amor prohibido. Monique empieza a sentir una conexión muy real con la actriz legendaria, pero cuando el relato de Evelyn se acerca a su fin, resulta evidente que su vida se cruza con la de Monique de un modo trágico e irreversible."
     }
 
 ]
@@ -46,10 +56,18 @@ export const getProductos = () => {
     })
 }
 
-export const getProductoById = (productoId) => {
+export const getProductById = (productoId) => {
     return new Promise ((resolve) =>{
         setTimeout (() =>{
-            resolve(productos.find(prod=> prod.id === productoId))
-        },500)
+            resolve(productos.find(producto=> producto.id === productoId))
+        },100)
+    })
+}
+
+export const getProductsByCategory = (categoryId) => {
+    return new Promise ((resolve) =>{
+        setTimeout (() =>{
+            resolve(productos.filter(producto=> producto.category === categoryId))
+        },100)
     })
 }
