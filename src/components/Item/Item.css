@@ -1,8 +1,15 @@
 .card-item {
-max-width: 15rem;
+  max-width: 12rem;
+}
+.card-item img {
+  height: 16rem;
+  object-fit: fill;
 }
 .card-item-body {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-item-body h5 {
+  font-size: 1rem;
 }

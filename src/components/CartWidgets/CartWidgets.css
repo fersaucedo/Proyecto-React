@@ -5,7 +5,19 @@
     font-size: 1.5rem;
     font-weight: 500;
     font-style: italic;
+    overflow: hidden;
+    position: relative;
+
 }
 .contenedor-cart img {
     width: 3rem;
+
+}
+.contenedor-cart:hover img {
+    animation: temblor 0.1s infinite alternate;
+}
+@keyframes temblor {
+    to {
+      transform: translate(-2px, -2px) rotate(-1deg);
+  }
 }
