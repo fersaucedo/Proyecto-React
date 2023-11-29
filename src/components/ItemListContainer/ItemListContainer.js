@@ -5,31 +5,33 @@ import "./ItemListContainer.css";
 import { useParams } from "react-router-dom";
 
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = ({ greeting }) => {
 
   const [productos, setProductos] = useState([])
 
-  const {categoryId} = useParams()
+  const { categoryId } = useParams()
 
   useEffect(() => {
 
     const asyncFunc = categoryId ? getProductsByCategory : getProductos;
 
     asyncFunc(categoryId)
-        .then(response => {
-          setProductos(response)
-        })
-        .catch(error => {
-          console.log(error)
-        })
+      .then(response => {
+        setProductos(response)
+      })
+      .catch(error => {
+        console.log(error)
+      })
 
   }, [categoryId])
 
 
   return (
-    <div className ="contenedor-bienvenida">
-        <h1>{greeting}</h1>
-        <ItemList productos={productos}/>
+    <div className="contenedor-bienvenida">
+      <h1>{greeting}</h1>
+      <div>
+        <ItemList productos={productos} />
+      </div>
     </div>
   )
 }
