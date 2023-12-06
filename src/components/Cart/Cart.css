@@ -1,0 +1,13 @@
+.contenedor-carrito-vacio {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-carrito-vacio h1 {
+    font-size: 2.5rem;
+}
+.link-carrito-vacio {
+    font-size: .9rem;
+}
