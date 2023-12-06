@@ -4,8 +4,6 @@ import { Link } from "react-router-dom"
 
 const Item = ({ id, name, img, price, stock }) => {
 
-    console.log('ID del producto en Item:', id);
-
     return (
 
 
