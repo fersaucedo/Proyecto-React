@@ -1,39 +1,60 @@
-import { useState, useEffect } from "react";
-import { getProductos, getProductsByCategory } from "../../asyncMock";
-import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
+import { useState, useEffect } from "react";
+import ItemList from "../ItemList/ItemList";
+
 import { useParams } from "react-router-dom";
+
+import { getDocs, collection, query, where } from 'firebase/firestore'
+import { db } from "../../config/firebase"
 
 
 const ItemListContainer = ({ greeting }) => {
 
-  const [productos, setProductos] = useState([])
+  const [productos, setProductos] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const { categoryId } = useParams()
 
   useEffect(() => {
+    setLoading(true);
 
-    const asyncFunc = categoryId ? getProductsByCategory : getProductos;
+    const collectionRef = categoryId ? query(collection(db, 'productos'), where('category', '==', categoryId)) : collection(db, 'productos')
 
-    asyncFunc(categoryId)
+    getDocs(collectionRef)
       .then(response => {
-        setProductos(response)
+        const productsAdapted = response.docs.map(doc => {
+          const data = doc.data()
+          return { id: doc.id, ...data }
+        })
+        setProductos(productsAdapted);
       })
       .catch(error => {
-        console.log(error)
+        console.log(error);
+      })
+      .finally(() => {
+        setLoading(false);
       })
 
   }, [categoryId])
 
-
-  return (
-    <div className="contenedor-bienvenida">
-      <h1>{greeting}</h1>
-      <div>
-        <ItemList productos={productos} />
+  if (loading) {
+    return (
+      <div className="cargando">
+        <h1>Cargando catalogo de libros</h1>
+        <img src="https://usagif.com/wp-content/uploads/loading-58.gif" alt="cargando" />
       </div>
-    </div>
-  )
+    )
+  } else {
+
+    return (
+      <div className="contenedor-bienvenida">
+        <h1>{greeting}</h1>
+        <div>
+          <ItemList productos={productos} />
+        </div>
+      </div>
+    )
+  }
 }
 
 export default ItemListContainer
