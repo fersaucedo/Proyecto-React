@@ -1,19 +1,20 @@
 import { createContext, useState } from 'react'
 
-export const CartContext = createContext()
+export const CartContext = createContext({
+    cart: []
+})
 
 export const CartProvider = ({ children }) => {
 
     const [cart, setCart] = useState([]);
 
-    console.log(cart)
-
     const addItem = (item, cantidad) => {
 
         if (!isInCart(item.id)) {
             setCart(prev => [...prev, { ...item, cantidad }]);
+            alert('El producto fue agregado correctamente al carrito')
         } else {
-            console.error('El producto ya esta en carrito');
+            alert('Este producto ya se encuentra en carrito');
         }
     }
 
