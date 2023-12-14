@@ -84,9 +84,13 @@ const Checkout = () => {
   }
 
   if (orderId) {
-    return (
-    <h1>El código de gestion es: {orderId}</h1>
     
+    return (
+      <div className='contenedor-carrito-vacio'>
+        <h2>Tu compra fue exitosa!🎉</h2>
+        <h6>El código de gestion es: {orderId}</h6>
+      </div>
+
     );
   }
 
