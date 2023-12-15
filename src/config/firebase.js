@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCAfBOw-Y5DL7VKO09k0b-TMEymEtugGuk",
-  authDomain: "librosvibes.firebaseapp.com",
-  projectId: "librosvibes",
-  storageBucket: "librosvibes.appspot.com",
-  messagingSenderId: "29391213014",
-  appId: "1:29391213014:web:4b36bf2095ba556d749477"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
 };
 
 

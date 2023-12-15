@@ -1,24 +1,23 @@
 .checkoutform {
-    width: 20rem;
-    height: 20rem;
-    background-color: beige;
-    border-radius: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+  width: 20rem;
+  height: 20rem;
+  background-color: beige;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 form {
-    width: 15rem;
-    display: flex;
-    flex-direction: column;
-    gap: .3rem;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 form input {
-    height: 2rem;
-    font-size: .7rem
+  height: 2rem;
+  font-size: 0.7rem;
 }
 form label {
-    font-size: .7rem;
+  font-size: 0.7rem;
 }

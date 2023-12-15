@@ -33,7 +33,6 @@ const Checkout = () => {
 
       const productsRef = collection(db, 'productos')
 
-      //continuar aca
       const productsAddedFromFirestore = await getDocs(query(productsRef, where(documentId(), 'in', ids)))
 
       const { docs } = productsAddedFromFirestore
@@ -85,7 +84,7 @@ const Checkout = () => {
   }
 
   if (orderId) {
-    
+
     return (
       <div className='contenedor-carrito-vacio'>
         <h2>Tu compra fue exitosa!🎉</h2>

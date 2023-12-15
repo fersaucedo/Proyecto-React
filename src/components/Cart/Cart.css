@@ -1,33 +1,33 @@
 .contenedor-carrito-vacio {
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .contenedor-carrito-vacio h1 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 .link-carrito-vacio {
-    font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .contenedor-carrito-grid {
-   min-height: 70vh;
-   padding-top: 3rem;
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
+  min-height: 70vh;
+  padding-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .contenedor-resumen-carrito {
-    position: fixed;
-    right: 0;
-    margin: .5rem 3rem;
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  position: fixed;
+  right: 0;
+  margin: 0.5rem 3rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .contenedor-botones-carrito {
-    display: flex;
-    gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }

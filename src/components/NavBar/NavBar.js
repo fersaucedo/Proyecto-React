@@ -8,8 +8,8 @@ const NavBar = () => {
       <Link to="/">
         <h2>LibrosVibes</h2>
       </Link>
-      <div className= "contenedor-categorias-cart">
-        <div className ="categorias">
+      <div className="contenedor-categorias-cart">
+        <div className="categorias">
           <NavLink to={`/category/Terror`} className="btn btn-outline-primary">Terror</NavLink>
           <NavLink to={`/category/Fantasia`} className="btn btn-outline-primary">Fantasia</NavLink>
           <NavLink to={`/category/Romance`} className="btn btn-outline-primary">Romance</NavLink>

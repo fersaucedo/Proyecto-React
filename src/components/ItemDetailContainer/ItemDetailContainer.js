@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
     getDoc(docRef)
       .then(response => {
         const data = response.data()
-        const productAdapted = { id: response.id, ...data}
+        const productAdapted = { id: response.id, ...data }
         setProducto(productAdapted)
       })
       .catch(error => {
@@ -42,11 +42,12 @@ const ItemDetailContainer = () => {
   } else {
 
 
-  return (
-    <div>
-      <ItemDetail {...producto} />
-    </div>
-  )}
+    return (
+      <div>
+        <ItemDetail {...producto} />
+      </div>
+    )
+  }
 }
 
 export default ItemDetailContainer

@@ -1,29 +1,29 @@
 nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: rgba(226, 226, 226, 0.815);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(226, 226, 226, 0.815);
 }
 nav h2 {
-   font-size: 3rem;
-   margin: .5rem;
-   font-style: italic;
-   color: black;
+  font-size: 3rem;
+  margin: 0.5rem;
+  font-style: italic;
+  color: black;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 nav button {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 .contenedor-categorias-cart {
-    display: flex; 
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 .categorias {
-    display: flex; 
-    gap: .5rem;
+  display: flex;
+  gap: 0.5rem;
 }

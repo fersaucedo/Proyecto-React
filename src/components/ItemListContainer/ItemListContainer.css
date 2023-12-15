@@ -1,16 +1,16 @@
 .contenedor-bienvenida h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    text-align: center;
-    padding: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 2rem;
 }
 .cargando {
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .cargando img {
-    width: 20%;
+  width: 20%;
 }
