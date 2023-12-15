@@ -1,6 +1,7 @@
 import './Checkout.css'
 import { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
+import { Link } from 'react-router-dom'
 import { db } from '../../config/firebase'
 import { writeBatch, addDoc, collection, query, where, getDocs, Timestamp, documentId } from 'firebase/firestore';
 import CheckoutForm from '../CheckoutForm/CheckoutForm'
@@ -89,6 +90,7 @@ const Checkout = () => {
       <div className='contenedor-carrito-vacio'>
         <h2>Tu compra fue exitosa!🎉</h2>
         <h6>El código de gestion es: {orderId}</h6>
+        <Link to='/' className='link-carrito-vacio btn btn-primary'> Volver al catalogo de libros</Link>
       </div>
 
     );
