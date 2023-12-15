@@ -9,9 +9,7 @@ import Cart from "./components/Cart/Cart";
 import Checkout from "./components/Checkout/Checkout";
 
 import { CartProvider } from "./context/CartContext";
-
-
-
+import AddProductButton from "./components/AddProductButton/AddProductButton";
 
 
 function App() {
@@ -27,6 +25,7 @@ function App() {
             <Route path='/item/:itemId' element={<ItemDetailContainer />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/checkout' element={<Checkout />} />
+            <Route path="/firestore" element={<AddProductButton />}/>
             <Route path='*' element={<h1>404 NOT FOUND</h1>} />
           </Routes>
           <Footer />
