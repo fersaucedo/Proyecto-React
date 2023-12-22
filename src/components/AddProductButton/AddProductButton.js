@@ -1,6 +1,7 @@
 import { db } from '../../config/firebase'
 import { collection, addDoc } from 'firebase/firestore';
 
+//boton para reabastecer el stock 
 const AddProductButton = () => {
     const addProductsToFirestore = async () => {
         try {
