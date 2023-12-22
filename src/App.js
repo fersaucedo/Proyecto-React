@@ -26,7 +26,7 @@ function App() {
             <Route path='/cart' element={<Cart />} />
             <Route path='/checkout' element={<Checkout />} />
             <Route path="/firestore" element={<AddProductButton />}/>
-            <Route path='*' element={<h1>404 NOT FOUND</h1>} />
+            <Route path='*' element={<h1 className="error">404 NOT FOUND</h1>} />
           </Routes>
           <Footer />
         </CartProvider>
